@@ -1,0 +1,20 @@
+<div class="card">
+  <div class="card-header bg-dark text-white">Heroes List</div>
+  <div class="card-body">
+    <ul>
+      <!-- ngFor -->
+      <li *ngFor="let hero of heroes" [class.selected]="selectedHero === hero" class="py-1">
+        <a class="input-group" routerLink="/hero/{{hero.id}}">
+          <div class="input-group-prepend">
+            <p class="input-group-text">{{ hero.id }}</p>
+          </div>
+          <div class="input-group-append">
+            <input type="submit" class="btn btn-secondary" value="{{ hero.name }}"/>
+          </div>
+        </a>
+      </li>
+      <!-- end -->
+    </ul>
+    <input (click)="goBack()" type="submit" class="btn btn-dark" value="back">
+  </div>
+</div>

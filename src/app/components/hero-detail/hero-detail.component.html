@@ -1,0 +1,109 @@
+<div class="card">
+	<div class="card-header bg-dark text-white">
+		<div *ngIf="hero; then thenBlock; else elseBlock"></div>
+		<ng-template #thenBlock>{{ hero.name | uppercase }} Detail</ng-template>
+		<ng-template #elseBlock>Loading...</ng-template>
+	</div>
+	<div class="card-body">
+		<div *ngIf="hero">
+			<div class="form-group row">
+				<label class="col-2 m-0">id:</label>
+				<p class="col-10 font-weight-bold">{{ hero.id }}</p>
+			</div>
+			<div class="form-group row">
+				<label class="col-2">name:</label>
+				<div class="col-10">
+					<input
+						[(ngModel)]="hero.name"
+						class="form-control"
+						placeholder="name"
+						name="hero_name"
+					/>
+				</div>
+			</div>
+			<div class="form-group row">
+				<label class="col-2">username:</label>
+				<div class="col-10">
+					<input
+						[(ngModel)]="hero.username"
+						class="form-control"
+						placeholder="username"
+						name="hero_username"
+					/>
+				</div>
+			</div>
+			<div class="form-group row">
+				<label class="col-2">email:</label>
+				<div class="col-10">
+					<input
+						[(ngModel)]="hero.email"
+						class="form-control"
+						placeholder="email"
+						name="hero_email"
+					/>
+				</div>
+			</div>
+			<div class="form-group row">
+				<label class="col-2">street:</label>
+				<div class="col-10">
+					<input
+						[(ngModel)]="hero.address.street"
+						class="form-control"
+						placeholder="street"
+						name="hero_street"
+					/>
+				</div>
+			</div>
+			<div class="form-group row">
+				<label class="col-2">suite:</label>
+				<div class="col-10">
+					<input
+						[(ngModel)]="hero.address.suite"
+						class="form-control"
+						placeholder="suite"
+						name="hero_suite"
+					/>
+				</div>
+			</div>
+			<div class="form-group row">
+				<label class="col-2">city:</label>
+				<div class="col-10">
+					<input
+						[(ngModel)]="hero.address.city"
+						class="form-control"
+						placeholder="city"
+						name="hero_city"
+					/>
+				</div>
+			</div>
+			<div class="form-group row">
+				<label class="col-2">zipcode:</label>
+				<div class="col-10">
+					<input
+						[(ngModel)]="hero.address.zipcode"
+						class="form-control"
+						placeholder="zipcode"
+						name="hero_zipcode"
+					/>
+				</div>
+			</div>
+		</div>
+
+		<div class="">
+			<button
+				type="submit"
+				(click)="goBack()"
+				class="btn btn-dark mr-2 mt-4"
+			>
+				back
+			</button>
+			<button
+				type="submit"
+				(click)="passObject()"
+				class="btn btn-dark mr-2 mt-4"
+			>
+				pass to another component
+			</button>
+		</div>
+	</div>
+</div>

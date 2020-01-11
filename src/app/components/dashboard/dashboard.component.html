@@ -1,0 +1,17 @@
+<div class="card">
+    <div class="card-header bg-dark text-white">Top Heroes</div>
+    <div class="card-body">
+        <div class="p-3 container row justify-content-center">
+			<!-- ngFor -->
+            <a *ngFor="let hero of heroes" routerLink="/hero/{{hero.id}}">
+                <div class="m-1 d-flex block bg-dark overflow-hidden rounded">
+                    <p class="m-0 w-100 text-center align-self-center text-white">{{ hero.name }}</p>
+                </div>
+			</a>
+			<!-- end -->
+        </div>
+        <a routerLink="/heroes">
+            <input type="submit" class="btn btn-dark" value="see all">
+        </a>
+    </div>
+</div>

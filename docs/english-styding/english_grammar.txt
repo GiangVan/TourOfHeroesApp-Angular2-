@@ -1,0 +1,4 @@
+dynamically added components
+calculated strings
+all heroes
+provider registering routes

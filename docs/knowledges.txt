@@ -1,0 +1,16 @@
+Files import mặc định: main.ts -> app.module.ts
+
+Angular sẽ import những files bị yêu cầu trước xog mới đến file gọi import với điều kiện files bị yêu cầu phải được sử dụng
+
+Thứ tự chạy các class bị gọi: AppRoutingModule -> AppModule -> AppComponent -> TestService -> MessageService -> MessageComponent -> HeroService -> DashboardComponent
+
+Template của component nào được sử dụng thì gọi class của component đó. Số lần gọi component's class tương ứng với số repeat of that component's template
+
+Khi refresh trang hoặc redirect thủ công, mọi thứ sẽ được nạp lại từ đầu
+
+Mỗi service class chỉ được tạo duy nhất một lần lúc tải trang cho đến lúc refresh, redirect thủ công hoặc close browser tab
+
+Mỗi khi redirect bằng RouterModule, class của component chứa trang đó sẽ được tạo lại
+
+
+

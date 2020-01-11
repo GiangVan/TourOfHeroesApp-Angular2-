@@ -1,0 +1,15 @@
+NgModules provide a compilation context components
+An Angular app defined by a set of NgModules
+An app has at least a root module that enables bootstrapping and typically has many more feature modules
+Components define views, which are sets of screen elements
+Components use services
+Service providers can be injected into components as dependencies
+Components and Services are simply classes
+Decorators mark Components and service type and provide metadata to Angular how to use them
+Template is directives and binding markup that allow Angular modify the HTML before rendering it
+The metadata for component class associates it with a template that defines a view
+The metadata for servic provides the data that Angular needs to make it available to components through dependency injection
+Router service define navigation paths among views
+
+
+C:\Work\Projects\myself\js\angular2+\angular-tour-of-heroes

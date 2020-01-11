@@ -1,0 +1,11 @@
+<div class="card">
+  <div class="card-header bg-dark text-white">Console</div>
+  <div class="card-body">
+    <div *ngIf="messageService.messages.length" class="w-100 p-3 bg-secondary rounded">
+      <!-- ngFor -->
+      <p *ngFor='let message of messageService.messages' class="text-white">{{message}}</p>
+      <!-- end -->
+    </div>
+    <input type="submit" (click)="messageService.clear()" class="btn btn-dark mt-3" value="clear"/>
+  </div>
+</div>
